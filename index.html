@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sharjil Bin Rashed | Data Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0a0a0f;
+        color: #fafafa;
+        overflow-x: hidden;
+      }
+      .mono { font-family: 'JetBrains Mono', monospace; }
+      .font-display { font-family: 'Space Grotesk', sans-serif; }
+      
+      /* Data Analyst Coordinate System Grid */
+      .bg-data-grid {
+        background-image: 
+          linear-gradient(to right, rgba(59, 130, 246, 0.08) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(59, 130, 246, 0.08) 1px, transparent 1px);
+        background-size: 100px 100px;
+      }
+      
+      .bg-sub-grid {
+        background-image: 
+          linear-gradient(to right, rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+
+      @keyframes pulse-slow {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 0.6; transform: scale(1.05); }
+      }
+
+      @keyframes float-data {
+        0% { transform: translateY(0) translateX(0); }
+        50% { transform: translateY(-20px) translateX(10px); }
+        100% { transform: translateY(0) translateX(0); }
+      }
+
+      .animate-pulse-slow {
+        animation: pulse-slow 8s infinite ease-in-out;
+      }
+
+      .animate-float-data {
+        animation: float-data 15s infinite ease-in-out;
+      }
+
+      .glass {
+        background: rgba(10, 10, 15, 0.4);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      
+      .mask-radial {
+        mask-image: radial-gradient(circle at center, black, transparent 95%);
+      }
+
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: #020204; }
+      ::-webkit-scrollbar-thumb { background: #1e1e24; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #2a2a32; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
